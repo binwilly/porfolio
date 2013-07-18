@@ -99,42 +99,61 @@ textarea {
 body {
     font: 14px / 24px "Roboto",Helvetica,Helvetica Neue,Arial
 }
-.home_nav {
+.home-nav {
     font-weight: 100;
     font-size: 1.4em;
 }
 
-.home_nav ul {
+.home-nav ul {
     height: 30px;
     width: 400px;
     margin: 50px auto;
 }
 
-.home_nav ul li {
+.home-nav ul li {
     float: left;
     padding: 0 35px;
 }
 
-.home_nav a , .home_nav a:active, .home_nav a:visited {
+.home-nav a , .home-nav a:active, .home-nav a:visited {
     text-decoration: none;
     color: black;
 }
 
-.home_nav a:hover {
+.home-nav a:hover {
     border-bottom: 1px solid Black;
 }
 
-.home_nav .menu {
+.home-nav .menu {
     margin: 50px auto;
     width: 500px;
 }
 
-.content_wrapper {
+.content-wrapper {
     width: 100%;
 }
 
-.content {
+#content {
     text-align: center;
+}
+
+#content-one, #content-two {
+    text-align: center;
+}
+
+.page-transition {
+    -webkit-transition: 3s ease;
+    transition: 3s ease;
+}
+
+.page-visible {
+
+}
+
+.page-hidden {
+    position: fixed;
+    top: 0;
+    right: 1500;
 }
 
 
