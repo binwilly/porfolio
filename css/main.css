@@ -139,23 +139,28 @@ body {
 
 #content-one, #content-two {
     text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-color: white;
 }
 
-.page-transition {
-    -webkit-transition: 3s ease;
-    transition: 3s ease;
-}
-
-.page-visible {
-
+#content-two {
+    border-right: 1px solid gray;
 }
 
 .page-hidden {
-    position: fixed;
-    top: 0;
-    right: 1500;
+    right: 1300px;
+    
 }
 
+.page-visible {
+    right: 0;
+}
+
+.page-transition {
+    -webkit-transition: 1s ease;
+}
 
 
 
