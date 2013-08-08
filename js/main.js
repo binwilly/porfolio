@@ -3,6 +3,7 @@ var PROFILE_WEB = {};
 
 PROFILE_WEB.content_one = '#content-one';
 PROFILE_WEB.content_two = '#content-two';
+PROFILE_WEB.content_wrapper = $('.content-wrapper');
 
 
 PROFILE_WEB.emptyContent = function() {
@@ -22,22 +23,20 @@ PROFILE_WEB.changePage = function(options) {
 	var element_to_show = $(options.selector);
 	console.log('show: ' + element_to_show.selector + ' hide: ' + element_to_hide.selector);
 
-	//element_to_show.removeClass();
+	
+	//PROFILE_WEB.content_wrapper.addClass('hide-overflow');
+	//Try to remove above class when transition is finish.
+	
 	element_to_show.addClass('page-swipe-' + options.direction);
-
 	element_to_show.show();
 	setTimeout(function(){
         element_to_show.removeClass();
 		element_to_hide.hide();
-		
+		PROFILE_WEB.content_wrapper.removeClass('hide-overflow');
     }, 100);
     
     element_to_hide.empty();
 };
-
-$('#b_action').bind('click', function() {
-	$('#content-one').prepend('<div class="prepend_div">Test</div>');
-});
 
 
 
