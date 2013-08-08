@@ -22,7 +22,7 @@ PROFILE_WEB.changePage = function(options) {
 	var element_to_show = $(options.selector);
 	console.log('show: ' + element_to_show.selector + ' hide: ' + element_to_hide.selector);
 
-	element_to_show.removeClass();
+	//element_to_show.removeClass();
 	element_to_show.addClass('page-swipe-' + options.direction);
 
 	element_to_show.show();
@@ -65,7 +65,7 @@ $('#b_action').bind('click', function() {
 		this.get('#/about', function() {
 			this.element_selector = PROFILE_WEB.emptyContent();
 			console.log(PROFILE_WEB.emptyContent());
-			$(PROFILE_WEB.emptyContent()).html('<span>About</span>');
+			this.render('./templates/about.template').replace(this.element_selector);
 			options = {'selector': this.element_selector, 'direction':'right'};
 		});
 

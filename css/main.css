@@ -131,7 +131,8 @@ body {
 
 .content-wrapper {
     width: 100%;
-    overflow: hidden;
+    height: 100%;
+    position: relative;
 }
 
 #content {
@@ -142,12 +143,7 @@ body {
     text-align: center;
     position: absolute;
     width: 100%;
-    height: 600px;
     -webkit-transition: 1s ease;
-}
-
-#content-two {
-    border-right: 1px solid gray;
 }
 
 .page-swipe-left {
@@ -155,7 +151,7 @@ body {
 }
 
 .page-swipe-right {
-
+    left: 2000px;
 }
 
 .page-swipe-bottom {
